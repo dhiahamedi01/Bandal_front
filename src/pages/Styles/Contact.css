@@ -1,0 +1,162 @@
+.contact-page-container {
+  width: 90% !important;
+  height: 1000px !important;
+  border-radius: 5px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.contact-page-text-span-2 {
+  color: #1E3A8A !important ;
+}
+
+.contact-page-form {
+  width: 100% !important;
+  padding: 20px !important;
+  margin-top: 10px !important;
+  margin-left: 50px !important;
+}
+
+.contact-page-text {
+  margin-bottom: 60px !important;
+}
+
+.contact-page-form-group {
+  margin-bottom: 50px;
+}
+
+.contact-page-form-group:first-child {
+  margin-top: 20px !important;
+}
+
+.contact-page-label {
+  font-weight: bold !important;
+  margin-bottom: 4px !important;
+  display: block !important;
+  font-size: 18px !important;
+}
+
+.contact-page-input,
+.contact-page-textarea {
+  width: 100% !important;
+  max-width: 400px !important;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 18px !important;
+  border-radius: 5px !important;
+}
+
+.contact-page-textarea {
+  width: 100% !important;
+  border-radius: 5px !important;
+  height: 150px !important;
+  max-width: 700px !important;
+}
+
+.contact-page-form-group textarea:focus,
+.contact-page-form-group input:focus {
+  font-size: 18px !important;
+}
+
+.contact-page-information-form {
+  background-color: #1E3A8A !important;
+  width: 30% !important;
+  /* height: 100% !important; */
+}
+
+.contact-page-info-header {
+  margin-top: 30px !important;
+}
+
+.contact-page-info-header-second-text {
+  margin-top: -20px !important;
+  margin-bottom: 40px !important;
+}
+
+.contact-info-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+.contact-info {
+  font-size: 24px !important;
+  color: #fff !important;
+  margin-left: 50px !important;
+  gap: 50px !important;
+}
+
+.contact-info-text {
+  margin-left: 40px !important;
+}
+
+.contact-info-text a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+@media (max-width: 1400px) {
+  .contact-page-container {
+    height: 100% !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    margin: 0 auto !important;
+    overflow-x: hidden;
+  }
+
+  .contact-page-form,
+  .contact-page-information-form {
+    width: 100% !important;
+  }
+
+  .contact-page-form {
+    height: 100% !important;
+    margin-bottom: 100px !important;
+    margin: 0 auto !important;
+    padding: 10% !important;
+  }
+
+  .contact-page-label,
+  .contact-page-input,
+  .contact-page-textarea {
+    font-weight: bold !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    font-size: 14px !important;
+  }
+
+  .contact-info {
+    font-size: 22px !important;
+    color: black !important;
+    gap: 40px !important;
+    margin-bottom: 10px !important;
+  }
+}
+.whatsapp-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #25d366;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px; /* un peu moins d’espace */
+  cursor: pointer;
+  gap: 20px;
+  transition: background-color 0.3s ease;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+  text-align: center;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+}
+

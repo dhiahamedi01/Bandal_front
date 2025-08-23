@@ -1,0 +1,11 @@
+.pending{
+    color: orange !important;
+}
+
+.accepted, .delivered{
+    color: greenyellow !important;
+}
+
+.canceled{
+    color: red !important;
+}

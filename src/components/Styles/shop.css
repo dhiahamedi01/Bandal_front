@@ -1,0 +1,14 @@
+.order-summary-before-checkout{
+    height: 150px;
+    width: 92%;
+    display:flex !important;
+    margin-top: 50px;
+    background-color: rgba(212, 210, 210, 0.091);
+    
+    }
+
+.class-for-price-size-total{
+        font-size: 40px !important;
+    }
+
+

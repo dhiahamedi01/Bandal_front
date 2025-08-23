@@ -1,0 +1,29 @@
+.Categories-main-div {
+  width: 90%;
+  align-self: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  margin: 0 auto !important;
+  margin-bottom: 30px !important;
+}
+
+.Categories-main-div-child {
+  width: 65%;
+  margin: 0 auto !important;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.align-center-title {
+  align-self: center !important;
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .Categories-main-div-child {
+    width: 100%;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}

@@ -1,0 +1,98 @@
+.About-us-component-main-div {
+  /* border: 2px solid purple; */
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+  width: 90%;
+  align-self: center;
+  gap: 150px;
+  margin-top: -4%;
+  align-items: center;
+}
+
+.span-class-name-main {
+  color: #1E3A8A;
+}
+
+.p-classname-title,
+.p-classname-title p {
+  font-size: 70px !important;
+}
+.paragraph-description-text {
+  font-size: 22px !important;
+}
+
+.title-with-text-classnamee {
+  width: 57%;
+  flex-wrap: wrap !important;
+  display: flex !important;
+}
+.div-for-img-button {
+  gap: 60px !important;
+}
+
+.collab-card-main-componentt {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 60px !important;
+}
+
+.About-us-component-main-divv {
+  display: flex;
+  min-height: 100vh;
+  width: 90%;
+  align-self: center;
+  /* margin-top: -4%; */
+  margin-top: 2%;
+  align-items: center;
+  gap: 5% !important;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .About-us-component-main-div {
+    display: flex !important;
+    margin-top: 60px;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+  }
+  .p-classname-title,
+  .p-classname-title p {
+    font-size: 35px !important;
+  }
+
+  .profile2-bandali {
+    width: 300px !important;
+    height: 100px !important;
+  }
+  .profile3-bandali {
+    display: none !important;
+  }
+  .About-us-component-main-divv {
+    width: 90% !important;
+    margin-top: 60px;
+    margin-left: 60px;
+  }
+
+  .paragraph-description-text {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 20px !important;
+    margin: 0 auto !important;
+    align-self: center !important;
+    width: 300px !important;
+    text-align: justify;
+  }
+  .class-for-profile {
+    width: 320px;
+    height: 320px;
+  }
+  .collab-card-main-componentt {
+    gap: 20px !important;
+    /* border: #1E3A8A 2px solid;/ */
+    width: 350px !important;
+  }
+}

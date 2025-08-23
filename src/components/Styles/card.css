@@ -1,0 +1,158 @@
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch; /* ⚡ toutes les cartes ont la même hauteur */
+  }
+  
+  .title-text-for-cardshop {
+    min-height: 70px; /* ajuste selon la taille du texte sur 2 lignes */
+  }
+  span {
+    min-height: 20px; /* ajuste selon la taille de la description sur 2 lignes */
+  }
+  
+  .single-product-component-card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 430px;
+  }
+  
+  .MDBCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .card-bod-shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .row-of-colors {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    min-height: 30px;  
+  }
+.single-product-component-card .title-text-for-cardshop,
+.single-product-component-card span {
+  display: -webkit-box;       /* pour les anciens navigateurs WebKit */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;      /* limite à 2 lignes pour WebKit */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: box;               /* pour la compatibilité future */
+  box-orient: vertical;
+  line-clamp: 2;              /* propriété standard */
+}
+.price-text {
+  margin-bottom: 4px !important;      /* espace réduit au dessous du prix */
+  min-height: auto !important; /* écrase le min-height hérité de .title-text-for-cardshop */
+}
+
+
+
+@media (max-width: 1226px){
+    .single-product-component-card{
+        width: 130px !important;
+        height: 240px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.162) !important;
+    margin-bottom: 30px !important;
+    
+
+    }
+    .button-for-add-to-card-button{
+        width: 80px !important;
+        height: 25px;
+        /* border: 2px solid red !important; */
+        font-size: 10px !important;
+        
+    }
+    .image-product-main-con{
+        width: 130px;
+        height: 130px;
+    }
+    .title-text-for-cardshop{
+        font-size: 14px !important;
+    }
+    .card-bod-shop{
+        padding: 5px !important;
+    }
+}
+
+.color-circle-main{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+    margin-right: 10px;
+}
+/* Image principale du produit */
+.image-product-main-con {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: all 1s ease-in-out; /* Effet fluide au hover */
+    cursor: pointer;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 1226px) {
+    .image-product-main-con {
+        width: 130px;
+        height: 130px;
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .single-product-component-card {
+      width: 45%; /* 2 cartes par ligne */
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .title-text-for-cardshop {
+        min-height: 50px; /* ajuste selon la taille du texte sur 2 lignes */
+      }
+      span {
+        min-height: 10px; /* ajuste selon la taille de la description sur 2 lignes */
+      }
+    .image-product-main-con {
+      height: 150px;
+    }
+  
+    .title-text-for-cardshop,
+    .single-product-component-card span {
+      font-size: 14px;
+    }
+  
+    .button-for-add-to-card-button {
+      font-size: 12px;
+      padding: 4px 6px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .single-product-component-card {
+      width: 100%; /* 1 carte par ligne */
+      height: auto;
+    }
+  
+    .image-product-main-con {
+      height: 120px;
+    }
+  
+    .title-text-for-cardshop,
+    .single-product-component-card span {
+      font-size: 13px;
+    }
+  
+    .button-for-add-to-card-button {
+      font-size: 11px;
+      padding: 3px 5px;
+    }
+  }

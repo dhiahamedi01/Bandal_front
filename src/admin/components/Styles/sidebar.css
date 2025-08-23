@@ -1,0 +1,54 @@
+
+
+  .sidebar-component-main{
+    min-height: 100vh;
+    height: auto !important;
+}
+.activeClicked{
+  background-color: goldenrod !important;
+  color: white !important;
+}
+
+@media (max-width: 912px){
+  .sidebar-component-main{
+    height: 100vh;
+    
+  }
+  
+}
+/* .App{
+  height: 100vh;
+} */
+.text-warning-color-main{
+  color: #ffffff !important;
+}
+
+.border-ul-list{
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.25) !important;
+  width: 100%;
+  display:flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
+.user-info-details-admin{
+  border:0.5px solid rgba(0, 0, 0, 0.25) ;
+  padding-left: 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.detail-location-order{
+  width: 250px;
+  padding-left: 20px;
+}
+
+.detail-location-order-description{
+  width: 100%;
+  height: fit-content !important;
+  padding-left: 20px;
+}
+.text-color-custom{
+  color: #FFE20E !important;
+}

@@ -1,0 +1,30 @@
+
+.signup-main-container-span a {
+  color: rgba(255, 226, 14, 0.7) !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+.signup-main-container-span a:hover {
+  color: black !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+@media (min-width: 768px) {
+
+
+.inputs-for-singup{
+  /* border: 2px solid black !important; */
+  margin-top: 65px !important;
+}
+
+.inputs-for-singup2{
+  /* border: 2px solid black !important; */
+  margin-top: 132px !important;
+  margin-left: 100px !important;
+
+}}
+
+.inputs-for-singup{
+  margin-top: 25px ;
+}

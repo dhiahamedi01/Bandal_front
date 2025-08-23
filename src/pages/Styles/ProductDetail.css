@@ -1,0 +1,215 @@
+
+.product-detail {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-inline: 100px;
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    transform: translateX(-90px); /* décale légèrement vers la gauche */
+}
+
+  
+  .product-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 20px;
+    order: 2; 
+  }
+  .product-images {
+    flex: 0 0 500px;        /* <= largeur fixe pour le bloc image */
+    height: 500px;          /* <= optionnel si tu veux un vrai carré */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    order: 1;
+  }
+  
+  .product-images .main-image {
+    width: 100%;
+    height: 100%;     /* prend toute la hauteur du bloc */
+    max-width: none;  /* enlève la limite */
+  }
+  
+  .product-images .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* garde la photo “carrée” sans se déformer */
+  }
+  
+  .thumbnail-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail-list img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    cursor: pointer;
+    object-fit: cover; /* taille fixe */
+    border: 2px solid transparent;
+    transition: transform 0.2s, border 0.2s;
+  }
+  
+  .thumbnail-list img.selected,
+  .thumbnail-list img:hover {
+    transform: scale(1.1);
+    border-color: #1C4EB5;
+  }
+  
+  /* --- Reste du CSS (prix, couleurs, caractéristiques) --- */
+  
+  .product-rating {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .product-price {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    color: #1C4EB5;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .product-colors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .colors-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .colors-list button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s, border 0.2s;
+  }
+  
+  .colors-list button:hover {
+    transform: scale(1.1);
+  }
+  
+  .product-caracteristiques {
+    margin-top: 20px;
+  }
+  
+  .product-caracteristiques h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .product-caracteristiques ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-caracteristiques li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  /* --- Responsive mobile --- */
+  @media (max-width: 900px) {
+    .product-detail {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* centre le texte */
+      transform: none;
+      margin-left: 0;
+      gap: 0px !important; /* espace réduit entre image et texte */
+    }
+  
+    /* Image en premier */
+    .product-images {
+      order: 1;
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centre la grande image et les miniatures */
+      margin-bottom: 0px; /* petit espace seulement */
+      width: 100%;
+    }
+    /* Texte juste après l'image */
+    .product-info {
+        flex: 1 1 200px !important;
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centre le contenu */
+      margin-top: 0; /* supprime tout espace inutile */
+    }
+  
+    .product-images .main-image {
+      height: auto;
+      width: 100%;
+      max-width: 400px; /* limite la taille pour garder joli */
+    }
+  
+    .thumbnail-list {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .thumbnail-list img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  
+  .add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* espace entre l'icône et le texte */
+    padding: 12px 20px;
+    background-color: #000000; /* couleur principale du bouton */
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font-family: gothic;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #000000; /* couleur au survol */
+    transform: translateY(-2px); /* léger effet de soulèvement */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .add-to-cart-button:active {
+    transform: translateY(0); /* revient à sa position normale */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .add-to-cart-button svg {
+    font-size: 18px;
+  }
+  

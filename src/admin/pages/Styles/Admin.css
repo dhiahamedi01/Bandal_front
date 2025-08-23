@@ -1,0 +1,29 @@
+.div-admin-dashboard-main{
+    height: 100vh !important;
+    width: 100vw !important;
+    width:100% !important;
+    gap:10% !important
+   
+
+}
+
+.div-admin-dashboard-main-child{
+    gap:5% !important;
+}
+
+
+.input-input-input{
+    /* border: 2px black solid !important; */
+    border-radius: 5px !important;
+}
+
+.margin-zero-auto{
+    margin-bottom: 50px !important;
+}
+
+@media (max-width: 768px){
+    .img-login-admin-user{
+        width: 100% !important;
+        height: 350px !important;
+    }
+}

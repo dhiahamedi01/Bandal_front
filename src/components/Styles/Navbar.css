@@ -1,0 +1,106 @@
+@font-face {
+    font-family: gothic;
+    src: url('../../assets/PathwayGothicOne-Regular.ttf');
+  }
+  
+.Navbar-main-Containerr{
+    color: black !important;
+    background-color: white;
+    padding-left: 95px !important;
+    padding-right: 95px !important;
+    font-family: gothic !important;
+    min-width: 100vw !important;
+
+}
+
+.Toolbar-Navbar-main-component{
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.Menu-Navbar-Component-main{
+    font-family: gothic !important;
+    font-size: 20px !important;
+}
+
+
+
+  .active  {
+    text-decoration:  3px underline #1E3A8A !important;
+  } 
+  /* Remove underline for unvisited Links */
+  .nav-item {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove underline for visited Links */
+  .nav-item :visited {
+    color: inherit;
+  }
+  
+  .MuiContainer-root {
+    min-width: 100vw !important;
+  }
+
+@media (max-width: 508px) {
+    .Logo-Navbar-main-component{
+        width: 130px !important;
+        margin-left: -50px;
+    }
+
+    .fi-shopping-card-icon{
+      width: 25px !important;
+      height: 25px !important;
+      margin-right: -50px !important;
+      
+    }
+
+}
+
+@media (max-width:899px){
+    .user-account-icon-navbars{
+        display:none !important;
+    }
+    .Toolbar-Navbar-main-component{
+        justify-content: space-between !important;
+        gap: 80px;
+        width: 400px !important;
+    }
+    .fi-shopping-card-icon , .small-circle{
+      margin-left: -200px !important;
+      
+    }
+    .small-circle{
+      margin-top: -40px !important;
+      margin-right: 20px !important;
+    }
+    .box-navbar-responsive-main{
+      margin-left: 60px !important;
+    }
+
+    .navbar-shop-icon-mobile-component{
+      border: 2px purple solid !important;
+      width: 85px !important  ;
+      height: 85px !important;
+      
+    }
+    
+
+}
+
+.class-to-remove-shadow{
+  box-shadow: none !important;
+  border-bottom: 0.5px solid rgb(120, 120, 120) !important;
+}
+.fi-shopping-card-icon{
+  font-size: 30px !important;
+  margin-right: 50px !important;
+}
+
+
+@media (max-width: 899px) {
+  .a-login-button-desktop{
+    display: none !important;
+  }
+}

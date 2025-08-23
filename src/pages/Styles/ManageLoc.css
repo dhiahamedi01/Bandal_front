@@ -1,0 +1,33 @@
+.manage-loc-page {
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  /* box-sizing: border-box; */
+}
+
+.manage-loc-table {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.manage-loc-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 508px) {
+  .manage-loc-page {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .manage-loc-page {
+    margin-top: 30px;
+  }
+}

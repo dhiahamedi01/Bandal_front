@@ -1,0 +1,14 @@
+.loginpage-main-container-span{
+  margin-left: 20px !important;
+
+}
+.loginpage-main-container-span a{
+
+ color: black !important;
+
+}
+.loginpage-main-container-span a:hover {
+  color: rgba(255, 226, 14, 0.7)  !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}

@@ -1,0 +1,32 @@
+.products-shop-container{
+    width: 90%;
+    display: flex;  
+    align-self: center;
+    margin-bottom: 100px !important;
+    min-height: 100vh;
+    
+
+}
+
+.product-main-div{
+    width: 90%;
+   margin:0 auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;;
+    
+}
+
+
+@media (max-width: 1226px) {
+    .product-main-div{
+        width: 90% !important;
+    }
+}
+
+.flex-category-title-main{
+    align-self: center !important;
+}

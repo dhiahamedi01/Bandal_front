@@ -1,0 +1,34 @@
+.single-cart-product-shopping-main-confirm{
+    display: flex;
+    width: 90%;
+    gap: 5px;
+    align-self: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.374);
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.confirm-location-order-main{
+    border: 1px solid rgba(0, 0, 0, 0.374);
+    border-top: none !important;
+    width: 90%;
+    margin-left: 20px !important;
+}
+
+.class-container-main-component{
+    justify-content: space-between !important;
+    padding: 30px;
+    border-top: none !important;
+    gap: 10px !important;
+}
+
+.span-price-style-quantity{
+    font-size: 25px !important;
+}
+
+
+.modal-show-body-component-main{
+    text-align: justify;
+    gap: 10px !important;
+
+}

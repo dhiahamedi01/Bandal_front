@@ -1,0 +1,17 @@
+.usable-button-component-main {
+  border-radius: 5px ;
+  color: white ;
+  border: none ;
+  width: 8.625rem !important ;
+  height: 3rem ;
+  font-size: 20px ;
+  background-color: black ;
+  transition: background 0.7s ease ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) ;
+}
+
+.usable-button-component-main:hover {
+  background-color: white ;
+  color: black ;
+  font-weight: bold ;
+}

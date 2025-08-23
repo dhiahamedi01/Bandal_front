@@ -1,0 +1,17 @@
+.span-for-date-updated{
+    font-size: 20px !important;
+}
+
+.Terms-and-condition-main-container{
+    width: 90%;
+    align-self: center !important;
+    margin-bottom: 80px;
+}
+
+
+.single-paragraph-terms-conditions{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
