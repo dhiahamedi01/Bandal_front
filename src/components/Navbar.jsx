@@ -27,9 +27,10 @@ const Navbar = () => {
   const { cartcount, carts } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.auth);
 
-  const [activePage, setActivePage] = useState(
-    localStorage.getItem("activePage")
-  );
+const [activePage, setActivePage] = useState(
+  localStorage.getItem("activePage") || "home"
+);
+
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
@@ -82,12 +83,16 @@ const Navbar = () => {
           disableGutters
           className="d-flex Toolbar-Navbar-main-component"
         >
-          <img
-            className="Logo-Navbar-main-component"
-            src={Logo}
-            width="220px"
-            alt=""
-          />
+         <Link to="/" onClick={() => handlePageChange("home")}>
+                <img
+                  className="Logo-Navbar-main-component"
+                  src={Logo}
+                  width="220px"
+                  alt="Logo"
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
+
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
