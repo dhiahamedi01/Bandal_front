@@ -21,12 +21,13 @@ import { logoutUser } from "../redux/apiCall/authCall";
 import ShoppingCart from "../components/ShoppingCart.jsx";
 import { useSelector } from "react-redux";
 import ButtonComponent from "./ButtonComponent";
+import useLoginToast from "./useLoginToast.jsx";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const { cartcount, carts } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.auth);
-
+  const showLoginToast = useLoginToast();
 const [activePage, setActivePage] = useState("home");
 
   const [userInfo, setUserInfo] = useState(null);

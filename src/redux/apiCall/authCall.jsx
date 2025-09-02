@@ -42,6 +42,7 @@ export const logoutUser = (user) => {
     localStorage.removeItem("userInfo");
     localStorage.removeItem("token");
     dispatch(authActions.login(null));
+    toast.warning("s'il vous plait fait la connexion");
   };
 };
 
