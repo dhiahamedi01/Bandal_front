@@ -60,23 +60,23 @@ const ProductDetail = () => {
     dispatch(cartActions.setCartsCount(temp_cart.length));
     localStorage.setItem("total", calculatedTotal);
 
-    toast.success("Produit ajouté au panier !");
+    toast.success("Product added to cart!");
   };
 
   return (
     <div className="product-detail">
       <div className="product-info">
-        <h1>{product.name || 'Nom indisponible'}</h1>
+        <h1>{product.name || 'Name unavailable'}</h1>
         <div className="product-rating">
           {[...Array(5)].map((_, i) => (
             <FaStar key={i} color="#FAAF00" />
           ))}
         </div>
         <p className="product-price">
-          {product.price ? `${product.price} €` : 'Prix indisponible'}
+          {product.price ? `${product.price} €` : 'Price unavailable'}
         </p>
         <p className="product-description">
-          {product.description || 'Description indisponible'}
+          {product.description || 'Description unavailable'}
         </p>
 
         {/* Affichage propre des couleurs */}
@@ -110,7 +110,7 @@ const ProductDetail = () => {
 
         {product.caracteristiques?.length > 0 && (
           <div className="product-caracteristiques">
-            <h3>Caractéristiques</h3>
+            <h3>Features</h3>
             <ul>
               {product.caracteristiques.map((c, idx) => (
                 <li key={idx}><FaCheckCircle color="green" /> {c}</li>
