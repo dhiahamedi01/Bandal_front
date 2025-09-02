@@ -1,6 +1,7 @@
 import { authActions } from "../slice/authSlice";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 //login user import { authActions } from './authSlice';
 
 export const loginUser = (email, password) => {
@@ -36,16 +37,45 @@ export const loginUser = (email, password) => {
 
 
 //logout User
-export const logoutUser = (user) => {
+export const logoutUser = (user, navigate) => {
   return (dispatch) => {
     dispatch(authActions.logout());
     localStorage.removeItem("userInfo");
     localStorage.removeItem("token");
     dispatch(authActions.login(null));
-    toast.warning("s'il vous plait fait la connexion");
+
+    // Toast avec boutons personnalisés
+    toast.warning(
+      ({ closeToast }) => (
+        <div className="flex flex-col gap-2">
+          <p className="font-medium">Please log in to continue</p>
+          <div className="flex gap-2 mt-2">
+            <button
+              onClick={() => {
+                navigate("/login");
+                closeToast();
+              }}
+              className="bg-black text-white px-3 py-1 rounded-md"
+            >
+              Log in
+            </button>
+            <button
+              onClick={closeToast}
+              className="bg-gray-300 text-black px-3 py-1 rounded-md"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      ),
+      {
+        autoClose: false, // laisse l’utilisateur choisir
+        closeOnClick: false,
+        draggable: false,
+      }
+    );
   };
 };
-
 //register user
 
 export function registerUser(user) {
