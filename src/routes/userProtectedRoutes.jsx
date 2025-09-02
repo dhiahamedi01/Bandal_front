@@ -30,8 +30,7 @@ const UserProtectedRoute = () => {
     if (!token && !user) {
      
       // If not authenticated, redirect to the login page
-        toast.warning("you need to be logged in to access!");
-        toast.info(
+        toast.warning(
           ({ closeToast }) => (
             <div
               style={{
