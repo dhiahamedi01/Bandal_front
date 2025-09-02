@@ -37,45 +37,42 @@ export const loginUser = (email, password) => {
 
 
 //logout User
-export const logoutUser = (user, navigate) => {
+export const logoutUser = (navigate) => {
   return (dispatch) => {
     dispatch(authActions.logout());
     localStorage.removeItem("userInfo");
     localStorage.removeItem("token");
-    dispatch(authActions.login(null));
 
-    // Toast avec boutons personnalisés
-    toast.warning(
+    toast.info(
       ({ closeToast }) => (
-        <div className="flex flex-col gap-2">
-          <p className="font-medium">Please log in to continue</p>
-          <div className="flex gap-2 mt-2">
+        <div className="flex flex-col gap-3 p-2">
+          <p className="text-sm font-semibold text-gray-800">
+            Please log in to continue
+          </p>
+          <div className="flex gap-3">
             <button
               onClick={() => {
-                navigate("/login");
+                navigate("/login"); // 👈 fonctionne car on a passé navigate
                 closeToast();
               }}
-              className="bg-black text-white px-3 py-1 rounded-md"
+              className="bg-black hover:bg-gray-900 text-white px-4 py-1.5 rounded-lg transition"
             >
               Log in
             </button>
             <button
               onClick={closeToast}
-              className="bg-gray-300 text-black px-3 py-1 rounded-md"
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-1.5 rounded-lg transition"
             >
               Cancel
             </button>
           </div>
         </div>
       ),
-      {
-        autoClose: false, // laisse l’utilisateur choisir
-        closeOnClick: false,
-        draggable: false,
-      }
+      { autoClose: false, closeOnClick: false, draggable: false }
     );
   };
 };
+
 //register user
 
 export function registerUser(user) {

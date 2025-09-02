@@ -12,6 +12,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom"; // 👈 import
 import Logo from "../assets/1002577587.png";
 import { Link, useLocation } from "react-router-dom";
 import "./Styles/Navbar.css";
@@ -27,6 +28,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { cartcount, carts } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate(); 
   const showLoginToast = useLoginToast();
 const [activePage, setActivePage] = useState("home");
 
@@ -212,7 +214,7 @@ const [activePage, setActivePage] = useState("home");
         className={`Menu-Navbar-Component-main nav-item ${
           activePage === "logout" ? "active" : ""
         }`}
-        onClick={() => dispatch(logoutUser())}
+        onClick={() => dispatch(logoutUser(navigate))}
       >
         <Typography textAlign="center">Log Out</Typography>
       </Link>
@@ -381,7 +383,7 @@ const [activePage, setActivePage] = useState("home");
                       className={`Menu-Navbar-Component-main nav-item ${
                         activePage === "logout" ? "active" : ""
                       }`}
-                      onClick={() => dispatch(logoutUser())}
+                      onClick={() => dispatch(logoutUser(navigate))}
                     >
                       <MenuItem onClick={handleCloseUserMenu}>
                         <Typography textAlign="center">Log Out</Typography>
