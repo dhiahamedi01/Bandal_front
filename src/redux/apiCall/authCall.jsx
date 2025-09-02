@@ -42,26 +42,37 @@ export const logoutUser = (navigate) => {
     dispatch(authActions.logout());
     localStorage.removeItem("userInfo");
     localStorage.removeItem("token");
+    dispatch(authActions.login(null));
 
     toast.info(
       ({ closeToast }) => (
-        <div className="flex flex-col gap-3 p-2">
-          <p className="text-sm font-semibold text-gray-800">
-            Please log in to continue
+        <div className="flex flex-col items-center gap-4 p-4">
+          {/* Image utilisateur ronde */}
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+            alt="User avatar"
+            className="w-14 h-14 rounded-full shadow-md border border-gray-300"
+          />
+
+          {/* Message */}
+          <p className="text-sm font-semibold text-gray-800 text-center">
+            You have been logged out. Please log in to continue.
           </p>
-          <div className="flex gap-3">
+
+          {/* Boutons */}
+          <div className="flex gap-3 w-full justify-center">
             <button
               onClick={() => {
-                navigate("/login"); // 👈 fonctionne car on a passé navigate
+                navigate("/login");
                 closeToast();
               }}
-              className="bg-black hover:bg-gray-900 text-white px-4 py-1.5 rounded-lg transition"
+              className="w-28 bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-2xl shadow-md transition-transform transform hover:scale-105"
             >
               Log in
             </button>
             <button
               onClick={closeToast}
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-1.5 rounded-lg transition"
+              className="w-28 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-2xl shadow-sm transition-transform transform hover:scale-105"
             >
               Cancel
             </button>
