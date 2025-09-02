@@ -2,6 +2,8 @@ import { authActions } from "../slice/authSlice";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+
 //login user import { authActions } from './authSlice';
 
 export const loginUser = (email, password) => {
@@ -46,40 +48,46 @@ export const logoutUser = (navigate) => {
 
     toast.info(
       ({ closeToast }) => (
-        <div className="flex flex-col items-center gap-4 p-4">
+        <div className="flex flex-col items-center gap-3 p-4">
           {/* Image utilisateur ronde */}
           <img
             src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
             alt="User avatar"
-            className="w-14 h-14 rounded-full shadow-md border border-gray-300"
+            className="w-12 h-12 rounded-full border border-gray-300 shadow-sm object-cover"
           />
 
           {/* Message */}
-          <p className="text-sm font-semibold text-gray-800 text-center">
-            You have been logged out. Please log in to continue.
+          <p className="text-sm font-medium text-gray-800 text-center">
+            You have been logged out.  
+            Please log in to continue.
           </p>
 
           {/* Boutons */}
-          <div className="flex gap-3 w-full justify-center">
+          <div className="flex gap-3 justify-center mt-2">
             <button
               onClick={() => {
                 navigate("/login");
                 closeToast();
               }}
-              className="w-28 bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-2xl shadow-md transition-transform transform hover:scale-105"
+              className="min-w-[100px] bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-xl shadow-md transition-transform hover:scale-105"
             >
               Log in
             </button>
             <button
               onClick={closeToast}
-              className="w-28 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-2xl shadow-sm transition-transform transform hover:scale-105"
+              className="min-w-[100px] bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-xl shadow-sm transition-transform hover:scale-105"
             >
               Cancel
             </button>
           </div>
         </div>
       ),
-      { autoClose: false, closeOnClick: false, draggable: false }
+      {
+        autoClose: false,
+        closeOnClick: false,
+        draggable: false,
+        position: "top-center", // centré
+      }
     );
   };
 };
