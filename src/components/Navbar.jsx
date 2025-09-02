@@ -21,11 +21,9 @@ import { logoutUser } from "../redux/apiCall/authCall";
 import ShoppingCart from "../components/ShoppingCart.jsx";
 import { useSelector } from "react-redux";
 import ButtonComponent from "./ButtonComponent";
-import useLoginToast from "./useLoginToast.jsx";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const showLoginToast = useLoginToast();
   const { cartcount, carts } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.auth);
 
@@ -209,19 +207,15 @@ const [activePage, setActivePage] = useState("home");
 
     <MenuItem onClick={handleCloseNavMenu}>
       <Link
-        to="#"
+        to="/"
         className={`Menu-Navbar-Component-main nav-item ${
           activePage === "logout" ? "active" : ""
         }`}
-        onClick={() => {
-          dispatch(logoutUser()); // déconnexion
-          showLoginToast();       // affiche le toast personnalisé
-        }}
+        onClick={() => dispatch(logoutUser())}
       >
         <Typography textAlign="center">Log Out</Typography>
       </Link>
     </MenuItem>
-
   </div>
 ) : (
   // Your other code for the 'else' case goes here
