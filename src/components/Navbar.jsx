@@ -168,7 +168,7 @@ const [activePage, setActivePage] = useState("home");
                   }`}
                   onClick={() => handlePageChange("product")}
                 >
-                  <Typography textAlign="center"> request a customize</Typography>
+                  <Typography textAlign="center">Request a Customize</Typography>
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
@@ -296,7 +296,7 @@ const [activePage, setActivePage] = useState("home");
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "black", display: "block" }}
                 >
-                   request a customize
+                  Request a Customize
                 </Button>
               </Link>
 
